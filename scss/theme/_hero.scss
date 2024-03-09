@@ -1,0 +1,22 @@
+.hero{
+  background-color: $slate;
+  background-size: cover;
+
+  &.hero-landing{
+    min-height: 100vh;
+  }
+
+  &.hero-default{
+    min-height: 45vh;
+  }
+
+  .hero-content{
+    height: inherit;
+    min-height: inherit;
+    padding: 3rem 0;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

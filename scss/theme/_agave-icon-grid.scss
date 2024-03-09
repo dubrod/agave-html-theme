@@ -1,0 +1,60 @@
+.agave-icon-grid{
+  margin-top:1.5rem;
+  display: flex;
+  flex-direction: row;
+  border-radius: .5rem;
+  background-color: $white;
+  border:1px solid $gray-300;
+  overflow: hidden;
+  min-height: 110px;
+  box-shadow:none;
+  transition: all .2s ease-in;
+
+  &:hover{
+    box-shadow: 1px 6px 9px rgba($gray-600,.4);
+    margin-top:1.25rem;
+    .agave-icon-grid_icon{
+      svg{
+        opacity: 1;
+        transform: scale(1.3) rotate(0deg);
+        margin-left: 0px;
+      }
+    }
+  }
+
+  .agave-icon-grid_icon{
+    background-color: $gray-100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1.2rem;
+
+    svg{
+      width: 60px;
+      fill: currentColor;
+      opacity: .5;
+      transform: scale(1) rotate(-35deg);
+      margin-left: -5px;
+      transition: all .2s ease-in;
+    }
+  }
+
+  .agave-icon-grid_content{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: .95rem;
+    color: $gray-600;
+    p{
+      margin: 0;
+    }
+
+    .agave-icon-grid_title{
+      margin:0;
+      font-size: 1.5rem;
+      color: $primary;
+    }
+  }
+
+}

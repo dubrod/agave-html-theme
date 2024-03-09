@@ -1,0 +1,25 @@
+header{
+  position: fixed;
+  top:0; left:0;
+  width: 100%;
+  z-index: 99;
+  transition: background-color .3s ease;
+  background-color: transparent;
+  &.fixed{
+    background-color: darken($slate,13%);
+  }
+  .logo{
+    padding: 1rem;
+    position: relative;
+    a{
+      &:focus,&:active{outline: 1px solid $gray-700;}
+      text-decoration: none;
+      color: $white;
+      transition: color .3s ease;
+      &:hover{
+        color: $gray-300;
+      }
+    }
+  }
+
+}

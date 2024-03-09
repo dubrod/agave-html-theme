@@ -1,0 +1,100 @@
+
+/// These items will be read but not visible, even on focus
+.sr-only{position: absolute !important;height: 1px; width: 1px;border: 0; padding: 0;overflow: hidden;clip: rect(1px, 1px, 1px, 1px);}
+
+// These items will be read but not visible, but will be visible on focus
+.sr-skip{
+    position:absolute;left:-9999px;
+    &:active,&:focus{
+        display:block;
+        position:static;
+        left:0;
+        background:transparent;
+        border:1px solid $primary;
+        color:$primary;
+        background: $white;
+        padding: 2px 5px;
+    }
+    @include media-breakpoint-up(lg) {
+      &:active,&:focus{
+        position: absolute;
+        border: 1px solid $white;
+        color: $white;
+        background: $primary;
+        top: 20px;
+        left: 300px;
+      }
+    }
+}
+
+/// Give focused elements an outline for users with contrast disability
+body *:focus,body *:active{outline: none;}
+
+body{
+  background-color: $white;
+}
+
+.card{
+  margin-bottom: 1rem;
+  .card-text{color: $gray-600;}
+}
+
+@media (min-width: 768px){
+  .container-md, .container-sm, .container {
+      max-width: 85%;
+  }
+}
+
+.news-page_tn{
+  background-color: $gray-200;
+  padding: 1rem;
+  border-radius: $border-radius;
+  border: 1px solid $gray-400;
+  margin-bottom: 1.5rem;
+  @include media-breakpoint-up(md){
+    max-width: 40%;
+    float: left;
+    margin-right: 2rem;
+  }
+
+  @include media-breakpoint-up(xl){
+    max-width: 50%;
+  }
+}
+
+.contact-form{
+  .form-label{
+    margin-bottom: 0;
+    padding: .3rem .6rem;
+    border-top-right-radius: .5rem;
+    border-top-left-radius: .5rem;
+    background-color: lighten($slate,8%);
+    color:$gray-400;
+  }
+  .form-control{
+    border-top-left-radius: 0;
+  }
+}
+
+.primary-pattern{
+  background: $primary;
+  background-position: top left;
+  background-repeat: repeat;
+  background-image: url('../img/webb-primary.jpg');
+  h1,h2,h3{color: $white;text-shadow: 1px 2px 2px rgba($gray-900,.3);}
+}
+
+.primary-pattern_light{
+  background: $white;
+  background-position: top left;
+  background-repeat: repeat;
+  background-image: url('../img/webb-light.jpg');
+  border-top: 1px solid $gray-100;
+}
+
+.primary-pattern_dark{
+  background: $gray-900;
+  background-position: top left;
+  background-repeat: repeat;
+  background-image: url('../img/webb-dark.jpg');
+}
